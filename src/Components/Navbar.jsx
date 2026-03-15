@@ -37,7 +37,7 @@ function Navbar() {
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Movies</Link>
           <Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-          <Link to="/favorites" onClick={() => setIsMobileMenuOpen(false)}>Favorites</Link>
+          <Link to="/favourites" onClick={() => setIsMobileMenuOpen(false)}>Favourites</Link>
           <Link to="#" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </div>
 

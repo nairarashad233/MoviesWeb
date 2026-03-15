@@ -2,15 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 .auth-container {
-    background: linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.85)),
-                url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover fixed no-repeat; 
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+        url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover fixed no-repeat;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: #ffffff;
-    padding-top: 120px; /* 90px for navbar + 30px extra space */
+    padding-top: 120px;
+    /* 90px for navbar + 30px extra space */
     padding-bottom: 2rem;
     position: relative;
     overflow: hidden;
@@ -19,7 +20,10 @@
 .auth-container::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     pointer-events: none;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     opacity: 0.03;
@@ -27,15 +31,16 @@
 }
 
 .auth-box {
-    background: rgba(30, 30, 30, 0.95); /* Dark matching image */
+    background: rgba(30, 30, 30, 0.95);
+    /* Dark matching image */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-    padding: 2.5rem 2rem; 
-    border-radius: 12px; 
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -44,8 +49,15 @@
 }
 
 @keyframes slideUpFade {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .auth-logo {
@@ -117,7 +129,8 @@
 
 .input-wrapper input {
     width: 100%;
-    padding: 0.9rem 1rem 0.9rem 3rem; /* padding-left for icon */
+    padding: 0.9rem 1rem 0.9rem 3rem;
+    /* padding-left for icon */
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: transparent;
@@ -213,14 +226,31 @@
     align-items: center;
     gap: 0.4rem;
     font-weight: 500;
-    animation: errorShake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+    animation: errorShake 0.4s cubic-bezier(.36, .07, .19, .97) both;
 }
 
 @keyframes errorShake {
-    10%, 90% { transform: translate3d(-1px, 0, 0); }
-    20%, 80% { transform: translate3d(2px, 0, 0); }
-    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
-    40%, 60% { transform: translate3d(4px, 0, 0); }
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
 }
 
 @media (max-width: 500px) {
